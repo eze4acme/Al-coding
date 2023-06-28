@@ -1,12 +1,8 @@
-// function count() {
-//     let count = 0
-//     function keepTrack() {
-//         console.log(count++);
-//     }
-// document.getElementById('btn').addEventListener('click', keepTrack)
-  
-// }
-// count ()
+
+// closure()
+// closure()
+// closure()
+// closure()
 // count ()
 
 // document.body.innerHTML = `<h1>Hello Nigeria`
@@ -38,3 +34,14 @@ value.map(ele =>{
     <h3>${ele.salary}</h3>
   `
 })
+
+function count() {
+    let count = 0
+   return function keepTrack() {
+        console.log(count++);
+    }
+
+  
+}
+const closure = count ()
+document.getElementById('btn').addEventListener('click', closure )

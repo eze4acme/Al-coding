@@ -1,0 +1,38 @@
+body{
+    width: 100%;
+    /* background-color: red; */
+  
+}
+.container{
+      text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#game{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: bold;
+}
+#btn{
+    background-color: red;
+    font-size: 20px;
+    padding: 10px 20px;
+}
+
+.number-section{
+    width: 90%;
+    background-color: red;
+    display: flex;
+    gap: 10px;
+    margin-top:100px;
+    flex-wrap: wrap;
+}
+
+.item{
+    /* margin-left: 10px; */
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 50%;
+}

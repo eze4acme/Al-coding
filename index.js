@@ -1,11 +1,11 @@
 
-// // closure()
-// // closure()
-// // closure()
-// // closure()
-// // count ()
+// closure()
+// closure()
+// closure()
+// closure()
+// count ()
 
-// // document.body.innerHTML = `<h1>Hello Nigeria`
+// document.body.innerHTML = `<h1>Hello Nigeria`
 
 // const person = [
 //   { name: 'bob', age: 25, salary: 200, job: 'developer' },
@@ -46,26 +46,28 @@
 // const closure = count ()
 // document.getElementById('btn').addEventListener('click', closure )
 
-// function countdown(targetDate) {
-//   let timer = setInterval(function() {
-//     const now = new Date().getTime();
-//     const timeRemaining = targetDate - now;
+function countdown(targetDate) {
+  let timer = setInterval(function() {
+    const now = new Date().getTime();
+    // console.log(now);
+    const timeRemaining = targetDate - now;
+    // console.log(timeRemaining);
 
-//     // Calculate days, hours, minutes, and seconds
-//     const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-//     const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-//     const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-//     const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+    // Calculate days, hours, minutes, and seconds
+    const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-//     console.log(`${days}d ${hours}h ${minutes}m ${seconds}s`);
+    console.log(`${days}d ${hours}h ${minutes}m ${seconds}s`);
 
-//     if (timeRemaining < 0) {
-//       clearInterval(timer);
-//       console.log("Countdown complete!");
-//     }
-//   }, 1000);
-// }
+    // if (timeRemaining < 0) {
+    //   clearInterval(timer);
+    //   console.log("Countdown complete!");
+    // }
+  }, 1000);
+}
 
-// // Example usage: countdown to December 31, 2023, 23:59:59 (local time)
-// const targetDate = new Date("December 31, 2023 23:59:59").getTime();
-// countdown(targetDate);
+// Example usage: countdown to December 31, 2023, 23:59:59 (local time)
+const targetDate = new Date("june 30, 2023").getTime();
+countdown(targetDate);

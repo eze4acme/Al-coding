@@ -1,73 +1,72 @@
+const person = [
+  { name: 'bob', age: 25, salary: 200, job: 'developer' },
+  { name: 'peter', age: 30, salary: 400, job: 'designer' },
+  { name: 'susy', age: 55, salary: 300, job: 'the boss' },
+  { name: 'bob', age: 45, salary: 500, job: 'backened' }
+];
 
-// closure()
-// closure()
-// closure()
-// closure()
-// count ()
+const per = person.reduce((acc, curItem) => {
+  const {name, age, salary, job} = curItem
 
-// document.body.innerHTML = `<h1>Hello Nigeria`
-
-// const person = [
-//   { name: 'bob', age: 25, salary: 200, job: 'developer' },
-//   { name: 'peter', age: 30, salary: 400, job: 'designer' },
-//   { name: 'susy', age: 55, salary: 300, job: 'the boss' },
-//   { name: 'bob', age: 45, salary: 500, job: 'backened' }
-// ];
-
-// const names = person.reduce(function (acc, currItem) {
-//     // console.log([...acc, currItem.name]);
-//     // return acc
-//   return [...acc, currItem];
-// }, []);
-// console.log(names);
-// const btn = document.getElementById('btn')
-// console.dir(btn)
-// btn.classList
-// localStorage.setItem('person', JSON.stringify(person))
-// // localStorage.clear()
-// const value = JSON.parse(localStorage.getItem('person'))
-// console.log(value);
-// value.map(ele =>{
-//     console.log(ele);
-//   document.body.innerHTML += `<h1>${ele.name}</h1>
-//   <h2>${ele.job}</h2>
-//     <h3>${ele.salary}</h3>
-//   `
-// })
-
-// function count() {
-//     let count = 0
-//    return function keepTrack() {
-//         console.log(count++);
-//     }
-
-  
-// }
-// const closure = count ()
-// document.getElementById('btn').addEventListener('click', closure )
-
-function countdown(targetDate) {
-  let timer = setInterval(function() {
-    const now = new Date().getTime();
-    // console.log(now);
-    const timeRemaining = targetDate - now;
-    // console.log(timeRemaining);
-
-    // Calculate days, hours, minutes, and seconds
-    const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-
-    console.log(`${days}d ${hours}h ${minutes}m ${seconds}s`);
-
-    // if (timeRemaining < 0) {
-    //   clearInterval(timer);
-    //   console.log("Countdown complete!");
-    // }
-  }, 1000);
+    
+     return [...acc, curItem]
+ 
+}, [])
+console.log(per);
+const totalAge = person.reduce((acc, curItem) => {
+  const {name, age, salary, job} = curItem
+  return acc + age
+}, 0)
+console.log(totalAge);
+console.log(person.at(-1).name);
+const txt = 'mike'
+const arr = ['mike', 'bob', 'louk']
+if (arr.includes(txt)) {
+  console.log(`hi iam `);
 }
 
-// Example usage: countdown to December 31, 2023, 23:59:59 (local time)
-const targetDate = new Date("june 30, 2023").getTime();
-countdown(targetDate);
+const par = person.find(ele => {
+  const {name, age, salary, job} = ele
+
+  if (name.includes('peter')) {
+    return ele
+  }
+})
+console.log(par.salary);
+
+const text = 's'
+const filt = person.filter(ele =>{
+  const {name, age, salary, job} = ele
+    return name.includes(text)
+  })
+  console.log(filt);
+
+
+  const url = 'https://course-api.com/react-tabs-project'
+
+  const res = await fetch('https://course-api.com/react-tabs-project')
+  const data = await res.json()
+
+  console.log(data);
+
+  
+  // const obj2 = Object.values(obj)
+  // console.log(obj2);
+  const check = Array.from({length:4}, () => Math.floor(Math.random()*10))
+  console.log(check);
+  
+  const check2 = Array.from({length:4}, (_, index) => index)
+  console.log(check2);
+  
+  function passWrd(length) {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()'
+    return Array.from({length}, () => characters.at(Math.floor(Math.random()*characters.length))).join('')
+  }
+  console.log(passWrd(9));
+  
+  console.log(Array.from({length:100}, (_, index) => index));
+  const udemy = 'udemy'
+  console.log(Array.from(udemy));
+  const obj3 =  { name: 'bob', age: 25, salary: 200, job: 'developer' }
+  console.log((Object.entries(obj3)));
+console.log(Array.from(Object.entries(obj3).flat()));
